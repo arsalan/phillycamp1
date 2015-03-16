@@ -6,8 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('picture-albums', function() {
-    this.route('new');
+  this.resource('picture-albums', function() { 
+  	this.route('show', { path: ':picture_album_id' });
+  	this.route('new');
+  	this.route('edit', { path: ':picture_album_id/edit' });
   });
 });
 
