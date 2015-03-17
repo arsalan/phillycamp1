@@ -1,5 +1,5 @@
 <h4>
-	{{!--link-to "Create New" "picture-albums.new"--}}
+	{{link-to "Create New" "picture-albums.new"}}
 </h4>
 <table>
 	<thead>
@@ -11,10 +11,10 @@
 	<tbody>
 		{{#each}}
 		<tr>
-			<td>{{name}}{{!--link-to name "picture-albums.show" this--}}</td>
+			<td>{{link-to name "picture-albums.show" this}}</td>
 			<td>{{description}}</td>
 			<td>{{pictureCount}}</td>
-			<td>{{!--link-to "Edit" "picture-albums.edit" this--}} | 
+			<td>{{link-to "Edit" "picture-albums.edit" this}} | 
 				<button {{!--action "delete" this--}}>Delete</button>
 			</td>
 		</tr>
