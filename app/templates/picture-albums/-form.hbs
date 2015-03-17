@@ -111,6 +111,7 @@ fieldset span {
 	<div class="pictures">
 		<button {{action "addPicture"}}>Add Picture</button>
 		<hr />
+		<h5><em>{{errorMessages}}</em></h5>
 		{{#each picture in pictures}}
 			<fieldset>
 				<legend><h5>Name: {{input value=picture.name}}</h5></legend>
