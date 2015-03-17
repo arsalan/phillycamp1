@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model: function() {
-		return this.store.find("picture-album");
+	model: function(params) {
+		return this.store.find('picture-album', params.pictureAlbumId);
 	},
 	actions: {
 		delete: function(album) {
 			album.destroyRecord();
-			return false;
+			this.transitionTo('picture-albums.index');
 		}
 	}
 });
