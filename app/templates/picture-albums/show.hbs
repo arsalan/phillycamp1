@@ -2,7 +2,7 @@
 <p>{{model.description}}</p>
 <p>There are {{model.pictureCount}} pictures in this album.</p>
 
-{{link-to "Edit" "picture-albums.edit"}} 
+{{link-to "Edit" "picture-albums.edit" model}} 
 <button {{action "delete" model}}>Delete</button>
 
 <div class="wrap">

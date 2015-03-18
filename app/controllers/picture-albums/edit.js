@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
 		}
 	},
 	isValid: Ember.computed('model.name', function() {
-		return !Ember.isEmpty(this.get('name'));
+		return !Ember.isEmpty(this.get('model.name'));
 	})
 });
 
