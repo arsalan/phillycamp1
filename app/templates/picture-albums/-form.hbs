@@ -97,21 +97,21 @@ fieldset span {
 	<div class="row">
 		<label class="col1">Name:&nbsp;&nbsp;</label>
 		<span class="col3">
-			{{input value=name type="text" id="name" size="20" tabindex="1"}}
+			{{input value=model.name type="text" id="name" size="20" tabindex="1"}}
 		</span>
 	</div>
 
 	<div class="row">
 		<label class="col1">Description:&nbsp;&nbsp;</label>
 		<span class="col3">
-			{{textarea value=description cols="20" rows="4"}}
+			{{textarea value=model.description cols="20" rows="4"}}
 		</span>
 	</div>
 	<div class="pictures">
 		<button {{action "addPicture"}}>Add Picture</button>
 		<hr />
 		<h5><em>{{errorMessages}}</em></h5>
-		{{#each picture in pictures}}
+		{{#each picture in model.pictures}}
 			<fieldset>
 				<legend><h5>Name: {{input value=picture.name}}</h5></legend>
 				<label class="col1">Description:</label> 

@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
 			return true;
 		}
 	},
-	isValid: Ember.computed('name', function() {
+	isValid: Ember.computed('model.name', function() {
 		return !Ember.isEmpty(this.get('name'));
 	})
 });

@@ -9,13 +9,13 @@
 		<th></th>
 	</thead>
 	<tbody>
-		{{#each}}
+		{{#each model as |album|}}
 		<tr>
-			<td>{{link-to name "picture-albums.show" this}}</td>
-			<td>{{description}}</td>
-			<td>{{pictureCount}}</td>
-			<td>{{link-to "Edit" "picture-albums.edit" this}} | 
-				<button {{!--action "delete" this--}}>Delete</button>
+			<td>{{link-to album.name "picture-albums.show" album.id}}</td>
+			<td>{{album.description}}</td>
+			<td>{{album.pictureCount}}</td>
+			<td>{{link-to "Edit" "picture-albums.edit" album.id}} | 
+				<button {{action "delete" album.id}}>Delete</button>
 			</td>
 		</tr>
 		{{/each}}

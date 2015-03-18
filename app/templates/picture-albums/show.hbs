@@ -1,12 +1,12 @@
-<h2><em>{{name}}</em></h2>
-<p>{{description}}</p>
-<p>There are {{pictureCount}} pictures in this album.</p>
+<h2><em>{{model.name}}</em></h2>
+<p>{{model.description}}</p>
+<p>There are {{model.pictureCount}} pictures in this album.</p>
 
-{{link-to "Edit" "picture-albums.edit" this}} 
-<button {{action "delete" this}}>Delete</button>
+{{link-to "Edit" "picture-albums.edit"}} 
+<button {{action "delete" model}}>Delete</button>
 
 <div class="wrap">
-    {{#each picture in pictures}}
+    {{#each picture in model.pictures}}
 	  <div class="box">
 	    <div class="boxInner">
 	      <img {{bind-attr src="picture.url"}} />
